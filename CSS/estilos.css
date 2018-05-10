@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+* {
+	box-sizing: border-box;
+}
+img {
+	display: block;
+	max-width: 100%;
+}
+body {
+	margin: 0;
+	font-family: 'Open Sans', sans-serif;
+}
+h1, h2, h3, h4, h5, h6 { 
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+	letter-spacing: 1.5px;
+}
+.section__titulo {
+	text-align: center;
+	font-size: 40px;
+	color: #243b66;	
+}
+.contenedor {
+	margin: auto;
+	width: 98%;
+}
+/*------------------------------------Estilos del header------------------------------------*/
+.header {
+	height: 60px;
+}
+.header .contenedor {
+	display: flex;
+	justify-content: space-between;
+}
+.logo {
+	position: relative;
+    top: 2px;
+    display: inline-block;
+    max-width: 100%;
+    float: left;
+}
+.logo .icon-menu {
+	margin: 5px;
+}
+.icon-menu {
+	display: block;
+	width: 40px;
+	height: 40px; 
+	font-size: 30px;
+	background: #243b66;
+	color: #fff;
+	text-align: center;
+	line-height: 49px;
+	border-radius: 10px;
+	margin-left: auto;
+	cursor: pointer;
+}
+/*-------------------------------------Estilos del menu-------------------------------------*/
+.nav {
+	position: absolute;
+	top: 55px;
+	left: 0;
+	width: 100%;
+	left: -100%;
+	transition: all 0.4s;
+}
+.menu {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.menu__link {
+	display: block;
+	padding: 15px;
+	background: #243b66;
+	text-decoration: none;
+	color: #fff;
+}
+.menu__link:hover, .select {
+	background: white;
+	color: #243b66;
+}
+.mostrar {
+	left: 0;
+}
+/*-------------------------------------Estilos de banner-------------------------------------*/
+.banner {
+	margin-top: -60px;
+	position: relative;
+	z-index: -1000;
+	margin-bottom: 20px;
+}
+.banner .contenedor {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	width: 100%;
+	color: #243b66;
+	text-align: center;
+}
+.banner__txt {
+	display: none;
+}
+/*--------------------------------------Estilos de info--------------------------------------*/
+.info__columna {
+	background: #243b66;
+	box-shadow:0px 4px 7px 0px rgba(50, 50, 50, 0.35);
+	color: #fff;
+	padding: 15px;
+	margin-bottom: 30px;
+}
+.info__txt {
+	font-size: 12px;
+}
+/*--------------------------------------Estilos de servicios---------------------------------*/
+.servicios__columna {
+	position: relative;
+	margin-bottom: 30px;
+}
+.servicios__descripcion {
+	position: absolute;
+	top: 0;
+	left: 0;
+	color: #fff;
+	background: rgba(0,0,0,0.5);
+	width: 60%;
+	height: 100%;
+	padding: 5px;
+}
+.servicios__titulo {
+	font-size: 25px;
+	margin: 5px 0;
+}
+.servicios__txt {
+	font-size: 12px;
+}
+/*---------------------------------------Estilos de footer----------------------------------*/
+.footer {
+	background: #333;
+	color: #fff;
+	padding: 10px;
+	text-align: center;
+}
+.footer .social [class^="icon-"] {
+	display: inline-block;
+	color: #333;
+	text-decoration: none;
+	font-size: 20px;
+	padding: 10px;
+	background: #fff;
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	line-height: 10px;
+}
+.copy {
+	font-size: 10px;
+	margin: 10px;
+}
+/*------------------------------------Estilos responsive------------------------------------*/
+@media(min-width:300px) {
+	.banner__titulo {
+		font-size: 27px;
+	}
+	.info__txt {
+		font-size: 14px;
+	}
+	.servicios__txt {
+		font-size: 14px;
+	}
+	.footer .social [class^="icon-"] {
+		margin: 0 5px;
+	}
+}
+@media(min-width:350px) {
+	.contenedor {
+		width: 95%;
+	}
+	.banner__titulo {
+		font-size: 32px;
+	}
+	.footer .social [class^="icon-"] {
+		margin: 0 7px;
+	}
+}
+@media(min-width:480px) {
+	.contenedor {
+		width: 97%;
+	}
+	.banner__titulo {
+		font-size: 35px;
+		margin: 5px 0;
+	}
+	.banner__txt{
+		display: block;
+		font-size: 20px;
+		margin: 7px 0;
+	}
+	.info, .servicios {
+		display: flex;
+		justify-content: space-between;
+		margin-top: -70px;
+	}
+	.info__columna {
+		width: 32%;
+	}
+	.section__titulo {
+		width: 100%;
+	}
+	.servicios {
+		flex-wrap: wrap;
+		margin-top: 0;
+	}
+	.servicios__txt {
+		font-size: 11px;
+	}
+	.servicios__columna {
+		width: 48%;
+	}
+	.footer .social [class^="icon-"] {
+		margin: 0 10px;
+	}
+}
+@media(min-width:500px) {
+	.contenedor {
+		width: 93%;
+	}
+	.servicios__txt {
+		font-size: 12px;
+	}	
+}
+@media(min-width:620px) {
+	.servicios__txt {
+		font-size: 14px;
+	}	
+}
+@media(min-width:768px) {
+	.contenedor {
+		width: 90%;
+	}
+	.banner__titulo {
+		font-size: 50px;
+	}
+	.info__titulo {
+		font-size: 40px;
+	}
+	.info, .servicios {
+		margin-top: -90px;
+	}
+	.servicios {
+		margin-top: 0;
+	}
+	.servicios__titulo {
+		font-size: 40px;
+	}
+}
+@media(min-width:1024px) {
+	.contenedor {
+		width: 800px;
+	}
+	.nav {
+		position: static;
+		width: auto;
+	}
+	.menu {
+		display: flex;
+	}
+	.icon-menu {
+		display: none;
+	}
+	.menu__link {
+		background: none;
+		font-size: 16px;
+		color: #243b66;
+	}
+	.select {
+		color: #fff;
+		background: #243b66;
+	}
+	.banner__titulo {
+		font-size: 60px;
+	}
+	.section__titulo {
+		font-size: 55px;
+		margin: 20px 0;
+	}
+	.info__titulo {
+		text-align: center;
+	}
+	.info__txt {
+		padding: 10px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-content: center;
+		align-items: center;
+	}
+	.servicios__descripcion {
+		padding: 20px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		align-content: center;
+		
+	}
+}
+
+
+
+
+
+
+
